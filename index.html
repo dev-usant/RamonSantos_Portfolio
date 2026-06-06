@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramon Santos | Data Engineer</title>
+  <meta name="description"
+    content="Ramon Santos — Data Engineer especializado em PySpark, SQL, Databricks, Azure Data Factory e ETL. Pipelines confiáveis e soluções escaláveis em nuvem." />
+  <meta name="keywords"
+    content="Ramon Santos, Data Engineer, Engenheiro de Dados, PySpark, Databricks, Azure, ADF, ETL, Delta Lake, SQL, Power BI" />
+  <meta name="author" content="Ramon Pereira dos Santos" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ramon Santos | Data Engineer" />
+  <meta property="og:description"
+    content="Data Engineer especializado em PySpark, SQL, Databricks e Azure. Transformo dados em valor com pipelines confiáveis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="src/assets/images/profile.jpg" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='10' width='80' height='80' rx='18' fill='%231C4293'/%3E%3Ctext x='50' y='66' font-family='Inter,sans-serif' font-size='46' font-weight='800' fill='white' text-anchor='middle'%3ERS%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header">
+    <nav class="nav">
+
+      <!-- Brand -->
+      <a href="#home" class="nav-brand" aria-label="Ramon Santos - Início">
+        <div class="brand-logo">RS</div>
+        Ramon Santos
+      </a>
+
+      <!-- Menu -->
+      <ul class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">Início</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+
+        <!-- Mobile Language -->
+        <li class="nav-mobile-lang">
+          <div class="mobile-lang-selector">
+            <div class="mobile-lang-option active" data-lang="pt">
+              <img src="src/assets/images/flag-br.png" alt="Português" /> <span>PT</span>
+            </div>
+            <div class="mobile-lang-option" data-lang="en">
+              <img src="src/assets/images/flag-us.png" alt="English" /> <span>EN</span>
+            </div>
+            <div class="mobile-lang-option" data-lang="es">
+              <img src="src/assets/images/flag-es.png" alt="Español" /> <span>ES</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Language selector -->
+        <div class="language-selector">
+          <button class="lang-btn" id="langBtn" aria-label="Selecionar idioma" aria-expanded="false">
+            <img src="src/assets/images/flag-br.png" alt="Idioma atual" id="currentFlag" />
+            <span id="currentLang">PT</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown" role="listbox">
+            <div class="lang-option active" data-lang="pt" role="option">
+              <img src="src/assets/images/flag-br.png" alt="" /> <span>Português</span>
+            </div>
+            <div class="lang-option" data-lang="en" role="option">
+              <img src="src/assets/images/flag-us.png" alt="" /> <span>English</span>
+            </div>
+            <div class="lang-option" data-lang="es" role="option">
+              <img src="src/assets/images/flag-es.png" alt="" /> <span>Español</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ══ MAIN ══ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-particles"></div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Text side -->
+          <div class="hero-text">
+            <div class="hero-badge">
+              <i class="fas fa-database"></i>
+              <span data-i18n="hero.badge">Engenharia de Dados</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span data-i18n="hero.greeting">Eu sou o</span>
+              <span class="gradient-text"> Ramon</span>
+            </h1>
+
+            <h2 class="hero-typewriter">
+              <span id="typewriter">Data Engineer</span><span class="cursor">|</span>
+            </h2>
+
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Transformo dados em valor com pipelines confiáveis e soluções escaláveis em nuvem.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#projects" class="btn-primary" id="hero-btn-projects">
+                <i class="fas fa-briefcase"></i>
+                <span data-i18n="hero.viewProjects">Ver Projetos</span>
+              </a>
+              <a href="#contact" class="btn-secondary" id="hero-btn-contact">
+                <i class="fas fa-envelope"></i>
+                <span data-i18n="hero.contact">Contato</span>
+              </a>
+            </div>
+
+            <div class="hero-social">
+              <a href="https://github.com/ramonsantz" class="social-link" target="_blank" rel="noopener"
+                aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ramonsantoss/" class="social-link" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:santdevoficial@gmail.com" class="social-link" aria-label="E-mail">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual side -->
+          <div class="hero-visual">
+            <div class="profile-showcase">
+              <div class="profile-ring">
+                <div class="profile-ring-inner"></div>
+              </div>
+              <div class="profile-main">
+                <img src="src/assets/images/profile.jpg" alt="Ramon Santos — Data Engineer" loading="eager" width="340"
+                  height="340" />
+              </div>
+              <div class="floating-cards">
+                <div class="floating-card card-pipeline">
+                  <i class="fas fa-project-diagram"></i>
+                  <span data-i18n="hero.card.pipeline">Pipeline</span>
+                </div>
+                <div class="floating-card card-cloud">
+                  <i class="fas fa-layer-group"></i>
+                  <span data-i18n="hero.card.cloud">Databricks</span>
+                </div>
+                <div class="floating-card card-spark">
+                  <i class="fas fa-bolt"></i>
+                  <span data-i18n="hero.card.spark">PySpark</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <i class="fas fa-chevron-down scroll-arrow"></i>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-subtitle" data-i18n="about.subtitle">Conheça mais</span>
+          <h2 class="section-title" data-i18n="about.title">Sobre Mim</h2>
+        </div>
+
+        <div class="about-content">
+          <!-- Text -->
+          <div class="about-text animate-on-scroll">
+            <p class="about-intro" data-i18n="about.intro">
+              Engenheiro de Dados focado em pipelines confiáveis e soluções escaláveis em nuvem.
+            </p>
+            <p data-i18n="about.description">
+              Profissional de dados com experiência em projetos de Engenharia de Dados em nuvem, atuando em sustentação,
+              suporte e evolução de pipelines. Experiência prática com PySpark, SQL, Databricks, Azure Data Factory e
+              Delta Lake. Vivência com integração de APIs REST, modelagem em arquitetura medalhão e governança de dados.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight animate-on-scroll">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <h4 data-i18n="about.education">Formação</h4>
+                  <p data-i18n="about.edu.value">ADS — UniFECAF</p>
+                </div>
+              </div>
+              <div class="highlight animate-on-scroll">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                  <h4 data-i18n="about.experience">Experiência</h4>
+                  <p data-i18n="about.exp.value">2+ anos</p>
+                </div>
+              </div>
+              <div class="highlight animate-on-scroll">
+                <i class="fas fa-award"></i>
+                <div>
+                  <h4 data-i18n="about.certifications">Certificações</h4>
+                  <p data-i18n="about.cert.value">Databricks, FinOps, Ada</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="src/assets/documents/CV-Ramon-Santos.pdf" class="btn-primary" id="btn-download-cv"
+              download="CV-Ramon-Santos.pdf" style="width: fit-content;">
+              <i class="fas fa-download"></i>
+              <span data-i18n="about.downloadCV">Download CV</span>
+            </a>
+          </div>
+
+          <!-- Timeline -->
+          <div class="about-timeline animate-on-scroll">
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 data-i18n="timeline.qsoft.period">Fev 2026 — Presente</h4>
+                  <h5 data-i18n="timeline.qsoft.title">Data Engineering Assistant — QSOFT</h5>
+                  <p data-i18n="timeline.qsoft.desc">PySpark, ADF, Delta Lake, CI/CD Azure DevOps</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 data-i18n="timeline.bmw.period">Nov 2024 — Ago 2025</h4>
+                  <h5 data-i18n="timeline.bmw.title">Warranty Analyst — BMW Group</h5>
+                  <p data-i18n="timeline.bmw.desc">SAP S/4HANA, Power BI, Excel</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 data-i18n="timeline.idemia.period">Out 2023 — Mar 2024</h4>
+                  <h5 data-i18n="timeline.idemia.title">Auxiliar Administrativo — IDEMIA</h5>
+                  <p data-i18n="timeline.idemia.desc">Ambiente corporativo híbrido</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-subtitle" data-i18n="services.subtitle">O que eu faço</span>
+          <h2 class="section-title" data-i18n="services.title">Como posso te ajudar</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i class="fas fa-stream"></i></div>
+            <h3 data-i18n="services.eng.title">Data Engineering</h3>
+            <p data-i18n="services.eng.desc">Construção e manutenção de pipelines ETL/ELT escaláveis em ambientes
+              multicloud.</p>
+            <ul class="service-features">
+              <li data-i18n="services.eng.f1">PySpark &amp; SQL</li>
+              <li data-i18n="services.eng.f2">Azure Databricks &amp; ADF</li>
+              <li data-i18n="services.eng.f3">Delta Lake Medallion</li>
+            </ul>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3 data-i18n="services.analytics.title">Analytics &amp; BI</h3>
+            <p data-i18n="services.analytics.desc">Desenvolvimento de dashboards e relatórios para apoio à tomada de
+              decisão.</p>
+            <ul class="service-features">
+              <li data-i18n="services.analytics.f1">Power BI &amp; Tableau</li>
+              <li data-i18n="services.analytics.f2">KPI Monitoring</li>
+              <li data-i18n="services.analytics.f3">Data Visualization</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-subtitle" data-i18n="skills.subtitle">Minhas especialidades</span>
+          <h2 class="section-title" data-i18n="skills.title">Ferramentas de Trabalho</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Data Eng -->
+          <div class="skill-category animate-on-scroll">
+            <h3 data-i18n="skills.dataeng.cat">Data Eng.</h3>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-python"></i></div>
+              <div class="skill-info">
+                <h4>Python</h4>
+                <p data-i18n="skills.python.desc">Análise e transformação de dados</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-info">
+                <h4>SQL</h4>
+                <p data-i18n="skills.sql.desc">Consultas e modelagem de dados</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+              <div class="skill-info">
+                <h4>PySpark</h4>
+                <p data-i18n="skills.pyspark.desc">Processamento distribuído em larga escala</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+              <div class="skill-info">
+                <h4>Databricks</h4>
+                <p data-i18n="skills.databricks.desc">Plataforma Lakehouse</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-circle-nodes"></i></div>
+              <div class="skill-info">
+                <h4>Delta Lake</h4>
+                <p data-i18n="skills.delta.desc">Arquitetura Medallion</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Cloud -->
+          <div class="skill-category animate-on-scroll">
+            <h3 data-i18n="skills.cloud.cat">Cloud</h3>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+              <div class="skill-info">
+                <h4>Azure ADF</h4>
+                <p data-i18n="skills.adf.desc">Orquestração de pipelines</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+              <div class="skill-info">
+                <h4>Azure Data Lake</h4>
+                <p data-i18n="skills.datalake.desc">Armazenamento escalável em nuvem</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-wind"></i></div>
+              <div class="skill-info">
+                <h4>Airflow</h4>
+                <p data-i18n="skills.airflow.desc">Orquestração de workflows</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-docker"></i></div>
+              <div class="skill-info">
+                <h4>Docker</h4>
+                <p data-i18n="skills.docker.desc">Containerização</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+              <div class="skill-info">
+                <h4>Git &amp; DevOps</h4>
+                <p>Azure DevOps, CI/CD</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- BI & Analytics -->
+          <div class="skill-category animate-on-scroll">
+            <h3 data-i18n="skills.bi.cat">BI &amp; Análise</h3>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+              <div class="skill-info">
+                <h4>Power BI</h4>
+                <p data-i18n="skills.powerbi.desc">Dashboards e visualizações</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+              <div class="skill-info">
+                <h4>Excel</h4>
+                <p data-i18n="skills.excel.desc">Análise e manipulação de dados</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="skill-info">
+                <h4>Tableau</h4>
+                <p data-i18n="skills.tableau.desc">Visualização de dados</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="skill-info">
+                <h4>SAP S/4HANA</h4>
+                <p>ERP corporativo</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-salesforce"></i></div>
+              <div class="skill-info">
+                <h4>Salesforce</h4>
+                <p>CRM &amp; validação documental</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-row animate-on-scroll">
+          <h3 class="certs-title">Certificações</h3>
+          <div class="certs-grid">
+            <div class="cert-badge"><i class="fas fa-certificate"></i> Databricks Fundamentals</div>
+            <div class="cert-badge"><i class="fas fa-certificate"></i> FinOps Foundation (Alura)</div>
+            <div class="cert-badge"><i class="fas fa-certificate"></i> Formação Python para Data Science (Alura)</div>
+            <div class="cert-badge"><i class="fas fa-certificate"></i> Engenharia de Dados (Ada Tech)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-subtitle" data-i18n="projects.subtitle">Meu trabalho</span>
+          <h2 class="section-title" data-i18n="projects.title">Projetos em Destaque</h2>
+        </div>
+
+        <div class="projects-filter animate-on-scroll">
+          <button class="filter-btn active" data-filter="all" data-i18n="projects.filter.all">Todos</button>
+          <button class="filter-btn" data-filter="eng" data-i18n="projects.filter.eng">Data Engineering</button>
+          <button class="filter-btn" data-filter="bi" data-i18n="projects.filter.bi">BI &amp; Analytics</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card animate-on-scroll" data-category="eng">
+            <div class="project-image">
+              <img src="src/assets/images/project-pipeline.png" alt="Pipeline Azure com Databricks & ADF"
+                loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/ramonsantz/pipeline_databricks_azure" target="_blank" rel="noopener"
+                    class="project-link" aria-label="Ver no GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category" data-i18n="proj1.cat">DATA ENGINEERING</div>
+              <h3 data-i18n="proj1.title">Pipeline Azure com Databricks &amp; ADF</h3>
+              <p data-i18n="proj1.desc">Pipeline completo de dados com ingestão de arquivos JSON, transformação em
+                PySpark e armazenamento em Delta Lake. Arquitetura Inbound → Bronze → Silver com orquestração
+                automatizada a cada 1h via ADF.</p>
+              <div class="project-tech">
+                <span>PySpark</span>
+                <span>Delta Lake</span>
+                <span>ADF</span>
+                <span>Databricks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card animate-on-scroll" data-category="eng">
+            <div class="project-image">
+              <img src="src/assets/images/project-multicloud.png" alt="Pipeline Automatizado com Airflow" loading="lazy"
+                style="object-fit: contain; background-color: #000;" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/ramonsantz/f1_2025_pipeline" target="_blank" rel="noopener"
+                    class="project-link" aria-label="Ver no GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category" data-i18n="proj2.cat">DATA ENGINEERING</div>
+              <h3 data-i18n="proj2.title">Automação de Pipeline com Airflow</h3>
+              <p data-i18n="proj2.desc">Pipeline ETL completo com ingestão via APIs e Web Scraping. Orquestração com
+                Apache Airflow, armazenamento em banco relacional e visualização com Streamlit.</p>
+              <div class="project-tech">
+                <span>Airflow</span>
+                <span>Streamlit</span>
+                <span>SQLite</span>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card animate-on-scroll" data-category="bi">
+            <div class="project-image">
+              <img src="src/assets/images/project-dashboard.png" alt="Dashboard FinOps Multicloud" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/ramonsantz/Automobile.Sales.data" target="_blank" rel="noopener"
+                    class="project-link" aria-label="Ver no GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category" data-i18n="proj3.cat">BI &amp; ANALYTICS</div>
+              <h3 data-i18n="proj3.title">Dashboard FinOps — Multicloud</h3>
+              <p data-i18n="proj3.desc">Dashboard de monitoramento de custos de 4 provedores cloud (AWS, Azure, GCP,
+                OCI). Desenvolvido para apoiar iniciativas de FinOps com dados de billing consolidados.</p>
+              <div class="project-tech">
+                <span>Power BI</span>
+                <span>SQL</span>
+                <span>DAX</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-subtitle" data-i18n="contact.subtitle">Fale comigo</span>
+          <h2 class="section-title contact-title" data-i18n="contact.title">Vamos conversar?</h2>
+        </div>
+
+        <div class="contact-content">
+
+          <!-- Info -->
+          <div class="contact-info animate-on-scroll">
+            <p class="contact-desc" data-i18n="contact.desc">
+              Aberto a novas oportunidades, projetos e conexões na área de dados. Fique à vontade para entrar em
+              contato!
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-info-text">
+                  <span data-i18n="contact.email.label">E-MAIL</span>
+                  <a href="mailto:santdevoficial@gmail.com">santdevoficial@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-info-text">
+                  <span data-i18n="contact.phone.label">TELEFONE</span>
+                  <a href="tel:+5511920092951">(11) 92009-2951</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+                <div class="contact-info-text">
+                  <span data-i18n="contact.loc.label">LOCALIZAÇÃO</span>
+                  <p data-i18n="contact.loc.value">São Paulo, Brasil</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fab fa-linkedin"></i></div>
+                <div class="contact-info-text">
+                  <span>LINKEDIN</span>
+                  <a href="https://www.linkedin.com/in/ramonsantoss/" target="_blank"
+                    rel="noopener">linkedin.com/in/ramonsantoss</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+                <div class="contact-info-text">
+                  <span>GITHUB</span>
+                  <a href="https://github.com/ramonsantz" target="_blank" rel="noopener">github.com/ramonsantz</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form animate-on-scroll">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" data-i18n="form.name">Nome</label>
+                  <input type="text" id="form-name" name="name" required placeholder="Seu nome" />
+                </div>
+                <div class="form-group">
+                  <label for="form-email" data-i18n="form.email">E-mail</label>
+                  <input type="email" id="form-email" name="email" required placeholder="seu@email.com" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject" data-i18n="form.subject">Assunto</label>
+                <input type="text" id="form-subject" name="subject" required placeholder="Como posso te ajudar?" />
+              </div>
+              <div class="form-group">
+                <label for="form-message" data-i18n="form.message">Mensagem</label>
+                <textarea id="form-message" name="message" rows="5" required
+                  placeholder="Escreva sua mensagem..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit" id="btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                <span data-i18n="form.send">Enviar Mensagem</span>
+              </button>
+              <div class="form-success" id="form-success" role="alert"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <div class="brand-logo">RS</div>
+          Ramon Santos
+        </div>
+
+        <p class="footer-copy" data-i18n="footer.copy">
+          © 2025 Ramon Santos. Todos os direitos reservados.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://github.com/ramonsantz" class="social-link" target="_blank" rel="noopener"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ramonsantoss/" class="social-link" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:santdevoficial@gmail.com" class="social-link" aria-label="E-mail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="src/js/main.js"></script>
+
+</body>
+
+</html>
