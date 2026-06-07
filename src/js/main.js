@@ -35,7 +35,7 @@ const translations = {
 
     "timeline.qsoft.period": "Fev 2026 — Presente",
     "timeline.qsoft.title": "Data Engineering Assistant — QSOFT",
-    "timeline.qsoft.desc": "PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
     "timeline.bmw.period": "Nov 2024 — Ago 2025",
     "timeline.bmw.title": "Warranty Analyst — BMW Group",
     "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
@@ -144,7 +144,7 @@ const translations = {
 
     "timeline.qsoft.period": "Feb 2026 — Present",
     "timeline.qsoft.title": "Data Engineering Assistant — QSOFT",
-    "timeline.qsoft.desc": "PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
     "timeline.bmw.period": "Nov 2024 — Aug 2025",
     "timeline.bmw.title": "Warranty Analyst — BMW Group",
     "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
@@ -253,7 +253,7 @@ const translations = {
 
     "timeline.qsoft.period": "Feb 2026 — Presente",
     "timeline.qsoft.title": "Asistente de Ingeniería de Datos — QSOFT",
-    "timeline.qsoft.desc": "PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
     "timeline.bmw.period": "Nov 2024 — Ago 2025",
     "timeline.bmw.title": "Analista de Garantía — BMW Group",
     "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
@@ -550,7 +550,8 @@ function initContactForm() {
       Mensagem: form.message.value,
       _subject: "💠 Entraram em contato pelo seu site Portfólio!",
       _template: "box",
-      _replyto: form.email.value
+      _replyto: form.email.value,
+      _cc: "rpereuradossantoa@gmail.com"
     };
 
     try {
@@ -583,17 +584,84 @@ function initContactForm() {
   });
 }
 
-/* ── Smooth scroll for anchor links ── */
+/* ── Smooth scroll for anchor links (slow easing) ── */
+function smoothScrollTo(targetEl) {
+  const headerHeight = 68;
+  const targetY = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight;
+  const startY = window.scrollY;
+  const diff = targetY - startY;
+  const duration = 900; // ms — slow and elegant
+  let startTime = null;
+
+  function easeInOutCubic(t) {
+    return t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeInOutCubic(progress);
+    window.scrollTo(0, startY + diff * eased);
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+
+  requestAnimationFrame(step);
+}
+
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        smoothScrollTo(target);
       }
     });
   });
+}
+
+/* ── Back to Top Button ── */
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const startY = window.scrollY;
+    const duration = 900;
+    let startTime = null;
+
+    function easeInOutCubic(t) {
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+      window.scrollTo(0, startY * (1 - eased));
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  });
+
+  // Show/hide based on scroll
+  function toggleBackToTop() {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
 }
 
 /* ── Init ── */
@@ -607,6 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initContactForm();
   initSmoothScroll();
+  initBackToTop();
 
   window.addEventListener('scroll', () => {
     updateScrollProgress();
