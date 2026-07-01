@@ -24,7 +24,7 @@ const translations = {
     "about.subtitle": "Conheça mais",
     "about.title": "Sobre Mim",
     "about.intro": "Engenheiro de Dados focado em pipelines confiáveis e soluções escaláveis em nuvem.",
-    "about.description": "Profissional de dados com experiência em projetos de Engenharia de Dados em nuvem, atuando em sustentação, suporte e evolução de pipelines. Experiência prática com PySpark, SQL, Databricks, Azure Data Factory e Delta Lake. Vivência com integração de APIs REST, modelagem em arquitetura medalhão e governança de dados.",
+    "about.description": "Profissional de dados com forte atuação em iniciativas de FinOps multicloud (AWS, Azure, GCP, OCI), estruturando bases analíticas diárias de custos. Experiência no desenvolvimento de automações, como a ingestão de cotação do dólar, e na criação de inventários de recursos cloud (discos, VMs e afins) na OCI. Sólida vivência técnica com PySpark, SQL, Databricks, Azure Data Factory e Delta Lake na construção de pipelines de dados confiáveis.",
     "about.education": "Formação",
     "about.experience": "Experiência",
     "about.certifications": "Certificações",
@@ -35,10 +35,10 @@ const translations = {
 
     "timeline.qsoft.period": "Fev 2026 — Presente",
     "timeline.qsoft.title": "Data Engineering Assistant — QSOFT",
-    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Engenharia de Dados Multicloud (AWS, Azure, GCP, OCI): desenvolvimento e manutenção de pipelines ETL com PySpark, SQL e Databricks. Automatização da cotação do dólar via API do Banco Central do Brasil. Arquitetura Medallion com Delta Lake, ingestão com ADF e APIs REST, e versionamento com Azure DevOps.",
     "timeline.bmw.period": "Nov 2024 — Ago 2025",
     "timeline.bmw.title": "Warranty Analyst — BMW Group",
-    "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
+    "timeline.bmw.desc": "Extração, validação e reconciliação de dados no SAP S/4HANA para processos de pós-vendas. Desenvolvimento de dashboards com Power BI e Excel para monitoramento de KPIs operacionais. Análises técnicas e validação de dados de garantia em colaboração com a BMW AG (Alemanha). Gestão de dados de negócio e validação de evidências via Salesforce.",
     "timeline.idemia.period": "Out 2023 — Mar 2024",
     "timeline.idemia.title": "Auxiliar Administrativo — IDEMIA",
     "timeline.idemia.desc": "Ambiente corporativo híbrido",
@@ -110,6 +110,10 @@ const translations = {
 
     "footer.copy": "© 2025 Ramon Santos. Todos os direitos reservados.",
 
+    "certs.title": "Certificações",
+    "cert.python": "Python para Data Science",
+    "cert.ada": "Engenharia de Dados (Ada Tech)",
+
     "typewriter": ["Data Engineer", "Engenheiro de Dados", "PySpark Developer", "Azure Data Factory"]
   },
 
@@ -133,7 +137,7 @@ const translations = {
     "about.subtitle": "Get to know me",
     "about.title": "About Me",
     "about.intro": "Data Engineer focused on reliable pipelines and scalable cloud solutions.",
-    "about.description": "Data professional with hands-on experience in cloud Data Engineering projects, working on support and evolution of data pipelines. Practical experience with PySpark, SQL, Databricks, Azure Data Factory and Delta Lake. Background in REST API integration, medallion architecture modeling and data governance.",
+    "about.description": "Data professional with strong experience in multicloud FinOps initiatives (AWS, Azure, GCP, OCI), structuring daily cloud cost analytical bases. Experienced in developing automations, such as dollar exchange rate ingestion, and creating cloud resource inventories (disks, VMs, etc.) in OCI. Solid technical background with PySpark, SQL, Databricks, Azure Data Factory, and Delta Lake in building reliable data pipelines.",
     "about.education": "Education",
     "about.experience": "Experience",
     "about.certifications": "Certifications",
@@ -144,10 +148,10 @@ const translations = {
 
     "timeline.qsoft.period": "Feb 2026 — Present",
     "timeline.qsoft.title": "Data Engineering Assistant — QSOFT",
-    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Multicloud Data Engineering (AWS, Azure, GCP, OCI): development and maintenance of ETL pipelines with PySpark, SQL and Databricks. Automation of USD exchange rate ingestion via Brazil Central Bank API. Medallion architecture with Delta Lake, ingestion with ADF and REST APIs, and version control with Azure DevOps.",
     "timeline.bmw.period": "Nov 2024 — Aug 2025",
     "timeline.bmw.title": "Warranty Analyst — BMW Group",
-    "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
+    "timeline.bmw.desc": "Data extraction, validation and reconciliation in SAP S/4HANA for after-sales processes. Dashboard development with Power BI and Excel for operational KPI monitoring. Technical analyses and warranty dataset validation in collaboration with BMW AG (Germany). Business data management and evidence validation via Salesforce.",
     "timeline.idemia.period": "Oct 2023 — Mar 2024",
     "timeline.idemia.title": "Administrative Assistant — IDEMIA",
     "timeline.idemia.desc": "Hybrid corporate environment",
@@ -219,6 +223,10 @@ const translations = {
 
     "footer.copy": "© 2025 Ramon Santos. All rights reserved.",
 
+    "certs.title": "Certifications",
+    "cert.python": "Python for Data Science",
+    "cert.ada": "Data Engineering (Ada Tech)",
+
     "typewriter": ["Data Engineer", "PySpark Developer", "Azure Data Factory", "ETL Architect"]
   },
 
@@ -242,7 +250,7 @@ const translations = {
     "about.subtitle": "Conóceme",
     "about.title": "Sobre Mí",
     "about.intro": "Ingeniero de Datos enfocado en pipelines confiables y soluciones escalables en la nube.",
-    "about.description": "Profesional de datos con experiencia en proyectos de Ingeniería de Datos en la nube, trabajando en soporte y evolución de pipelines. Experiencia práctica con PySpark, SQL, Databricks, Azure Data Factory y Delta Lake. Experiencia en integración de APIs REST, modelado en arquitectura medallón y gobernanza de datos.",
+    "about.description": "Profesional de datos con fuerte experiencia en iniciativas de FinOps multicloud (AWS, Azure, GCP, OCI), estructurando bases analíticas diarias de costos en la nube. Experiencia en el desarrollo de automatizaciones, como la ingestión de la cotización del dólar, y en la creación de inventarios de recursos (discos, VMs y afines) en OCI. Sólida base técnica con PySpark, SQL, Databricks, Azure Data Factory y Delta Lake en la construcción de pipelines de datos confiables.",
     "about.education": "Educación",
     "about.experience": "Experiencia",
     "about.certifications": "Certificaciones",
@@ -253,10 +261,10 @@ const translations = {
 
     "timeline.qsoft.period": "Feb 2026 — Presente",
     "timeline.qsoft.title": "Asistente de Ingeniería de Datos — QSOFT",
-    "timeline.qsoft.desc": "Databricks, PySpark, ADF, Delta Lake, CI/CD Azure DevOps",
+    "timeline.qsoft.desc": "Ingeniería de Datos Multicloud (AWS, Azure, GCP, OCI): desarrollo y mantenimiento de pipelines ETL con PySpark, SQL y Databricks. Automatización de la cotización del dólar vía API del Banco Central de Brasil. Arquitectura Medallion con Delta Lake, ingestión con ADF y APIs REST, y control de versiones con Azure DevOps.",
     "timeline.bmw.period": "Nov 2024 — Ago 2025",
     "timeline.bmw.title": "Analista de Garantía — BMW Group",
-    "timeline.bmw.desc": "SAP S/4HANA, Power BI, Excel",
+    "timeline.bmw.desc": "Extracción, validación y reconciliación de datos en SAP S/4HANA para procesos de posventa. Desarrollo de dashboards con Power BI y Excel para monitoreo de KPIs operacionales. Análisis técnicos y validación de datos de garantía en colaboración con BMW AG (Alemania). Gestión de datos de negocio y validación de evidencias vía Salesforce.",
     "timeline.idemia.period": "Oct 2023 — Mar 2024",
     "timeline.idemia.title": "Auxiliar Administrativo — IDEMIA",
     "timeline.idemia.desc": "Entorno corporativo híbrido",
@@ -328,12 +336,16 @@ const translations = {
 
     "footer.copy": "© 2025 Ramon Santos. Todos los derechos reservados.",
 
+    "certs.title": "Certificaciones",
+    "cert.python": "Python para Data Science",
+    "cert.ada": "Ingeniería de Datos (Ada Tech)",
+
     "typewriter": ["Ingeniero de Datos", "Data Engineer", "PySpark Developer", "Azure Data Factory"]
   }
 };
 
 /* ── State ── */
-let currentLang = localStorage.getItem('lang') || 'pt';
+let currentLang = localStorage.getItem('lang') || 'en';
 let currentTheme = localStorage.getItem('theme') || 'dark';
 let typewriterIndex = 0;
 let charIndex = 0;
@@ -374,7 +386,7 @@ function applyLang(lang) {
   });
 
   // html lang attribute
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es' : 'en';
 
   // Restart typewriter
   typewriterIndex = 0;
