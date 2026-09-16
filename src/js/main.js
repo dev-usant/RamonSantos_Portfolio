@@ -345,7 +345,7 @@ const translations = {
 };
 
 /* ── State ── */
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = localStorage.getItem('portfolio_lang') || 'en';
 let currentTheme = localStorage.getItem('theme') || 'dark';
 let typewriterIndex = 0;
 let charIndex = 0;
@@ -364,7 +364,7 @@ function applyTheme(theme) {
 /* ── Apply Language ── */
 function applyLang(lang) {
   currentLang = lang;
-  localStorage.setItem('lang', lang);
+  localStorage.setItem('portfolio_lang', lang);
   const t = translations[lang];
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -559,15 +559,11 @@ function initContactForm() {
       Nome: form.name.value,
       "E-mail": form.email.value,
       Assunto: form.subject.value,
-      Mensagem: form.message.value,
-      _subject: "💠 Entraram em contato pelo seu site Portfólio!",
-      _template: "box",
-      _replyto: form.email.value,
-      _cc: "rpereuradossantoa@gmail.com"
+      Mensagem: form.message.value
     };
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/santdevoficial@gmail.com", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -696,3 +692,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(typewriter, 800);
 });
+
