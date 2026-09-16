@@ -547,48 +547,31 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
+    
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+    
+    // Construct email body
+    const bodyText = `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`;
+    
+    // Construct mailto URL
+    const mailtoLink = `mailto:santdevoficial@gmail.com?bcc=rpereuradossantoa@gmail.com&subject=${encodeURIComponent(subject || 'Contato pelo Portfólio')}&body=${encodeURIComponent(bodyText)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
     const success = document.getElementById('form-success');
-
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-
-    const formData = {
-      Nome: form.name.value,
-      "E-mail": form.email.value,
-      Assunto: form.subject.value,
-      Mensagem: form.message.value
-    };
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        if (success) {
-          success.style.display = 'block';
-          success.textContent = translations[currentLang]['form.success'];
-          setTimeout(() => { success.style.display = 'none'; }, 5000);
-        }
-        form.reset();
-      } else {
-        alert("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
-      }
-    } catch (err) {
-      alert("Erro de conexão ao enviar o e-mail.");
-      console.error(err);
-    } finally {
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> <span data-i18n="form.send">Enviar Mensagem</span>';
+    if (success) {
+      success.style.display = 'block';
+      success.textContent = translations[currentLang]['form.success'];
+      setTimeout(() => { success.style.display = 'none'; }, 5000);
     }
+    form.reset();
   });
 }
 
